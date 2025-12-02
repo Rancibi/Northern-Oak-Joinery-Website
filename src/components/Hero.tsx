@@ -3,6 +3,8 @@ import { Button } from './ui/button';
 import { ArrowRight, Award, Users, Calendar } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
+const HeroImage = '../src/assets/portfolio/hero-image.webp';
+
 interface HeroProps {
   onGetQuote?: () => void;
   onViewWork?: () => void;
@@ -74,7 +76,7 @@ export function Hero({ onGetQuote, onViewWork }: HeroProps) {
           <div className="relative">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-amber-100 shadow-2xl">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1754409410155-2079b647f00e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvYWslMjB0aW1iZXIlMjBmcmFtaW5nJTIwY29uc3RydWN0aW9uJTIwYmVhbXN8ZW58MXx8fHwxNzU4MDcxNTY1fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                src={HeroImage}
                 alt="Traditional oak timber framing and roof trusses"
                 className="w-full h-full object-cover"
               />

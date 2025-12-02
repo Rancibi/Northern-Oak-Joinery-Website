@@ -14,8 +14,7 @@ import {
   Shield,
   Truck
 } from 'lucide-react';
-// Note: Replace with your actual logo URL when deploying
-const logo = 'https://images.unsplash.com/photo-1516035519623-60b13b3ed394?w=80&h=80&fit=crop&crop=center';
+const logo = '../src/assets/northernOakJoinery_Logo.webp';
 
 interface FooterProps {
   onPageChange?: (page: string) => void;
@@ -37,7 +36,7 @@ export function Footer({ onPageChange }: FooterProps) {
       return;
     }
     
-    // Replace with actual newsletter signup API when deploying
+    // Replace with newsletter signup API call
     console.log('Newsletter signup for:', email);
     
     // Show success feedback
@@ -92,7 +91,6 @@ export function Footer({ onPageChange }: FooterProps) {
                 { id: 'home', label: 'Home' },
                 { id: 'services', label: 'Services' },
                 { id: 'portfolio', label: 'Portfolio' },
-                { id: 'configurator', label: 'Design Tool' },
                 { id: 'about', label: 'About Us' },
                 { id: 'contact', label: 'Contact' }
               ].map((item) => (
@@ -134,7 +132,7 @@ export function Footer({ onPageChange }: FooterProps) {
               <div className="flex items-start space-x-3">
                 <Phone className="h-4 w-4 text-amber-400 mt-1 flex-shrink-0" />
                 <div className="text-sm">
-                  <div className="text-gray-300">01423 123456</div>
+                  <a href="tel:07943526366" className="text-gray-300">07943526366</a>
                   <div className="text-gray-400 text-xs">Mon-Fri 8am-6pm</div>
                 </div>
               </div>
@@ -142,7 +140,7 @@ export function Footer({ onPageChange }: FooterProps) {
               <div className="flex items-start space-x-3">
                 <Mail className="h-4 w-4 text-amber-400 mt-1 flex-shrink-0" />
                 <div className="text-sm">
-                  <div className="text-gray-300">info@northernoakjoinery.com</div>
+                  <a href="mailto:inquiries@northernoakjoinery.com" className="text-gray-300">inquiries@northernoakjoinery.com</a>
                   <div className="text-gray-400 text-xs">We reply within 24 hours</div>
                 </div>
               </div>
@@ -150,9 +148,9 @@ export function Footer({ onPageChange }: FooterProps) {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 text-amber-400 mt-1 flex-shrink-0" />
                 <div className="text-sm text-gray-300">
-                  Oak Tree Farm<br />
-                  Harrogate, North Yorkshire<br />
-                  HG2 8QR
+                  Northern Oak Joinery<br />
+                  Kippax, Leeds<br />
+                  LS25 7EF
                 </div>
               </div>
             </div>

@@ -59,7 +59,7 @@ export function Header({ currentPage = 'home', onPageChange }: HeaderProps) {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-gray-600">
               <Phone className="h-4 w-4" />
-              <span>01423 123456</span>
+              <a href="tel:07943526366">07943526366</a>
             </div>
             <Button 
               onClick={() => handleNavClick('contact')}

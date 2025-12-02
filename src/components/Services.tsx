@@ -4,6 +4,11 @@ import { Card, CardContent } from './ui/card';
 import { Home, Building, Hammer, Ruler, ArrowRight } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
+const OakRoofTrussesImage = '../src/assets/portfolio/oak_roof_trusses.webp';
+const TimberFrameStructuresImage = '../src/assets/portfolio/timber_frame_structures.webp';
+const BarnConversionsImage = '../src/assets/portfolio/barn_conversions.webp';
+const HeritageRestorationImage = '../src/assets/portfolio/heritage_restoration.webp';
+
 interface ServicesProps {
   onLearnMore?: (service: string) => void;
 }
@@ -16,7 +21,7 @@ export function Services({ onLearnMore }: ServicesProps) {
       title: 'Oak Roof Trusses',
       description: 'Traditional and modern oak roof trusses designed and crafted using time-honored techniques for exceptional strength and beauty.',
       features: ['Structural calculations', 'Traditional mortise & tenon', 'Custom spans', 'Heritage approved'],
-      image: 'https://images.unsplash.com/photo-1655103878427-dc3ecbb792c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400&h=300'
+      image: OakRoofTrussesImage
     },
     {
       id: 'timber-frames',
@@ -24,7 +29,7 @@ export function Services({ onLearnMore }: ServicesProps) {
       title: 'Timber Frame Structures',
       description: 'Complete oak timber frame buildings from barns and workshops to extensions and new builds using Yorkshire oak.',
       features: ['Full structural design', 'Sustainably sourced oak', 'Modern building regs', 'Traditional joinery'],
-      image: 'https://images.unsplash.com/photo-1738666830212-ff16d849bf39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400&h=300'
+      image: TimberFrameStructuresImage
     },
     {
       id: 'barn-conversions',
@@ -32,7 +37,7 @@ export function Services({ onLearnMore }: ServicesProps) {
       title: 'Barn Conversions',
       description: 'Sympathetic conversion of existing barns and agricultural buildings, preserving character while meeting modern standards.',
       features: ['Planning guidance', 'Listed building expertise', 'Character retention', 'Modern compliance'],
-      image: 'https://images.unsplash.com/photo-1713729674648-9c195d1f7fe5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400&h=300'
+      image: BarnConversionsImage
     },
     {
       id: 'heritage-restoration',
@@ -40,7 +45,7 @@ export function Services({ onLearnMore }: ServicesProps) {
       title: 'Heritage Restoration',
       description: 'Expert restoration of historic timber buildings using traditional methods, materials and conservation principles.',
       features: ['Conservation methods', 'Heritage expertise', 'Listed building work', 'Period authenticity'],
-      image: 'https://images.unsplash.com/photo-1627821618348-1af5f48d2f5f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400&h=300'
+      image: HeritageRestorationImage
     }
   ];
 

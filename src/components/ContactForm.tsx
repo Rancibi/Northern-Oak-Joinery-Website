@@ -156,7 +156,7 @@ export function ContactForm({ type = 'contact' }: ContactFormProps) {
                 </div>
                 <div>
                   <h4 className="text-gray-900 mb-1">Phone</h4>
-                  <p className="text-gray-600">01423 123456</p>
+                  <a href="tel:07943526366" className="text-gray-600">07943526366</a>
                   <p className="text-sm text-gray-500">Mon-Fri 8am-6pm</p>
                 </div>
               </div>
@@ -167,7 +167,7 @@ export function ContactForm({ type = 'contact' }: ContactFormProps) {
                 </div>
                 <div>
                   <h4 className="text-gray-900 mb-1">Email</h4>
-                  <p className="text-gray-600">info@northernoakjoinery.com</p>
+                  <p className="text-gray-600">inquiries@northernoakjoinery.com</p>
                   <p className="text-sm text-gray-500">We reply within 24 hours</p>
                 </div>
               </div>
@@ -179,9 +179,9 @@ export function ContactForm({ type = 'contact' }: ContactFormProps) {
                 <div>
                   <h4 className="text-gray-900 mb-1">Workshop</h4>
                   <p className="text-gray-600">
-                    Oak Tree Farm<br />
-                    Harrogate, North Yorkshire<br />
-                    HG2 8QR
+                    Northern Oak Joinery<br />
+                    Kippax, Leeds<br />
+                    LS25 7EF
                   </p>
                 </div>
               </div>
@@ -193,8 +193,8 @@ export function ContactForm({ type = 'contact' }: ContactFormProps) {
                 <div>
                   <h4 className="text-gray-900 mb-1">Hours</h4>
                   <p className="text-gray-600">
-                    Monday - Friday: 8am - 6pm<br />
-                    Saturday: 9am - 4pm<br />
+                    Monday - Friday: 9am - 5pm<br />
+                    Saturday: Closed<br />
                     Sunday: Closed
                   </p>
                 </div>
