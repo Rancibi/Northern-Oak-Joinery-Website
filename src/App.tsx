@@ -42,7 +42,7 @@ function App() {
       case 'portfolio':
         return (
           <div className="min-h-screen">
-            <Portfolio onViewProject={handleGetQuote} />
+            <Portfolio onViewProject={handleGetQuote} onViewWork={handleViewWork} />
             <div className="bg-white py-20">
               <div className="container mx-auto px-4 text-center">
                 <h2 className="text-3xl text-gray-900 mb-6">
@@ -206,7 +206,7 @@ function App() {
           <div>
             <Hero onGetQuote={handleGetQuote} onViewWork={handleViewWork} />
             <Services onLearnMore={handleGetQuote} />
-            <Portfolio onViewProject={handleGetQuote} />
+            <Portfolio onViewProject={handleGetQuote} onViewWork={handleViewWork} />
             <Testimonials onGetQuote={handleGetQuote} />
             <ContactForm type="contact" />
           </div>

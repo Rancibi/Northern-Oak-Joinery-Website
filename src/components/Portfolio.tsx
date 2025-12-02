@@ -5,12 +5,14 @@ import { Card, CardContent } from './ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { ExternalLink, Calendar, MapPin } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { useNavigate } from 'react-router-dom';
 
 interface PortfolioProps {
   onViewProject?: (projectId: string) => void;
+  onViewWork?: () => void;
 }
 
-export function Portfolio({ onViewProject }: PortfolioProps) {
+export function Portfolio({ onViewProject, onViewWork  }: PortfolioProps) {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const projects = [
@@ -21,7 +23,7 @@ export function Portfolio({ onViewProject }: PortfolioProps) {
       location: 'Ripon, Yorkshire',
       date: '2024',
       description: 'Traditional oak roof trusses for heritage church restoration using mortise and tenon joinery.',
-      tags: ['Roof Trusses', 'Heritage', 'Church'],
+      tags: ['Roof Trusses', 'Church'],
       image: 'https://images.unsplash.com/photo-1723122893153-4e09c49be998?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=500&h=400',
       featured: true
     },
@@ -32,7 +34,7 @@ export function Portfolio({ onViewProject }: PortfolioProps) {
       location: 'Harrogate, Yorkshire',
       date: '2024',
       description: 'Sympathetic conversion of 17th-century barn preserving original oak frame and character.',
-      tags: ['Barn Conversion', 'Listed Building', 'Heritage'],
+      tags: ['Barn Conversion', 'Listed Building'],
       image: 'https://images.unsplash.com/photo-1715855752720-7c8147ba9d87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=500&h=400',
       featured: true
     },
@@ -49,7 +51,7 @@ export function Portfolio({ onViewProject }: PortfolioProps) {
     },
     {
       id: 'oak-beam-restoration',
-      category: 'heritage-restoration',
+      category: 'timber-frames',
       title: 'Tudor House Oak Beams',
       location: 'York, Yorkshire',
       date: '2023',
@@ -68,17 +70,6 @@ export function Portfolio({ onViewProject }: PortfolioProps) {
       tags: ['Roof Trusses', 'New Build', 'Contemporary'],
       image: 'https://images.unsplash.com/photo-1738666830212-ff16d849bf39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=500&h=400',
       featured: false
-    },
-    {
-      id: 'village-hall-restoration',
-      category: 'heritage-restoration',
-      title: 'Village Hall Restoration',
-      location: 'Boroughbridge, Yorkshire',
-      date: '2022',
-      description: 'Complete structural restoration of Victorian village hall oak roof and supporting beams.',
-      tags: ['Village Hall', 'Victorian', 'Structural'],
-      image: 'https://images.unsplash.com/photo-1627821618348-1af5f48d2f5f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=500&h=400',
-      featured: false
     }
   ];
 
@@ -86,8 +77,7 @@ export function Portfolio({ onViewProject }: PortfolioProps) {
     { id: 'all', label: 'All Projects' },
     { id: 'roof-trusses', label: 'Roof Trusses' },
     { id: 'timber-frames', label: 'Timber Frames' },
-    { id: 'barn-conversions', label: 'Barn Conversions' },
-    { id: 'heritage-restoration', label: 'Heritage Restoration' }
+    { id: 'barn-conversions', label: 'Barn Conversions' }
   ];
 
   const filteredProjects = selectedCategory === 'all' 
@@ -200,7 +190,7 @@ export function Portfolio({ onViewProject }: PortfolioProps) {
             variant="outline"
             size="lg"
             className="border-amber-700 text-amber-700 hover:bg-amber-50 px-8"
-            onClick={() => onViewProject?.('view-all')}
+            onClick={onViewWork}
           >
             View Full Portfolio
           </Button>

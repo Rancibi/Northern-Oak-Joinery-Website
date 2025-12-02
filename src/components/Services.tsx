@@ -38,14 +38,6 @@ export function Services({ onLearnMore }: ServicesProps) {
       description: 'Sympathetic conversion of existing barns and agricultural buildings, preserving character while meeting modern standards.',
       features: ['Planning guidance', 'Listed building expertise', 'Character retention', 'Modern compliance'],
       image: BarnConversionsImage
-    },
-    {
-      id: 'heritage-restoration',
-      icon: <Ruler className="h-8 w-8" />,
-      title: 'Heritage Restoration',
-      description: 'Expert restoration of historic timber buildings using traditional methods, materials and conservation principles.',
-      features: ['Conservation methods', 'Heritage expertise', 'Listed building work', 'Period authenticity'],
-      image: HeritageRestorationImage
     }
   ];
 
